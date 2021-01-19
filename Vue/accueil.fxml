@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox id="wholee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" stylesheets="@../sources/styleAccueil.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.AccueilController">
+   <children>
+      <StackPane fx:id="stack" HBox.hgrow="ALWAYS">
+         <children>
+            <BorderPane id="body" prefHeight="800.0" prefWidth="400.0" stylesheets="@../sources/style.css">
+               <top>
+                  <BorderPane prefHeight="71.0" prefWidth="817.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#accueil" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../sources/Logo.png" />
+                           </image>
+                           <BorderPane.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </BorderPane.margin>
+                        </ImageView>
+                     </left>
+                     <center>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="connexion" mnemonicParsing="false" onAction="#cnx" styleClass="btn1" text="Connexion" />
+                              <Button mnemonicParsing="false" onAction="#aide" styleClass="btn1" text="Aide" />
+                              <Button mnemonicParsing="false" onAction="#propos" styleClass="btn1" text="À propos">
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="5.0" top="15.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane fx:id="bp" BorderPane.alignment="CENTER">
+                     <center>
+                        <Text fill="WHITE" lineSpacing="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des prêts sociaux et életroménagers de la commission des œuvres sociales de l'ESI" textAlignment="CENTER" wrappingWidth="650.0" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Text>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</HBox>
