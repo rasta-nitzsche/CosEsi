@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="body" prefHeight="226.0" prefWidth="467.0" stylesheets="@../sources/styleBudget.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.EmailContaController">
+    <children>
+        <Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="40.0" prefWidth="423.0" styleClass="title" text="Veuillez introduire l'émail de la comptabilité" textAlignment="CENTER" />
+        <Label layoutX="101.0" layoutY="90.0" styleClass="labels" text="Émail :" />
+        <Button fx:id="confirmer" layoutX="294.0" layoutY="177.0" mnemonicParsing="false" onAction="#confirmer" styleClass="confirmer" text="Confirmer" />
+        <TextField fx:id="email" layoutX="204.0" layoutY="84.0" prefHeight="21.0" prefWidth="153.0" styleClass="new" />
+    </children>
+</AnchorPane>

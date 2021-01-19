@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox id="body" fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" stylesheets="@../sources/styleSettings.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.ArchivesController">
+   <children>
+      <VBox id="leftSide" fx:id="leftSide" prefHeight="800.0" prefWidth="309.0">
+         <children>
+            <ImageView fitHeight="83.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../sources/Logo.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="30.0" />
+                    </VBox.margin>
+                </ImageView>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="586.0" prefWidth="309.0" styleClass="scroll">
+               <content>
+                  <StackPane prefHeight="584.0" prefWidth="307.0">
+                     <children>
+                        <VBox fx:id="menu" prefHeight="555.0" prefWidth="324.0">
+                           <children>
+                              <Button alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#afficherHome" styleClass="btn" text="Accueil">
+                                 <graphic>
+                                    <ImageView fitHeight="80.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/home-run%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDemandes" prefHeight="81.0" prefWidth="307.0" styleClass="btn" text="Demandes des prêts" textAlignment="CENTER" textFill="#357ab7">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/demandes3.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button id="prets" alignment="BOTTOM_LEFT" graphicTextGap="15.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherPrets" styleClass="btn" text="Suivi des prêts" textAlignment="CENTER" textFill="#357ab7">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/prets3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="BOTTOM_LEFT" graphicTextGap="7.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherStats" styleClass="btn" text="Statistiques" textFill="#357ab7">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="65.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/stats3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button id="courant" alignment="BOTTOM_LEFT" graphicTextGap="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherArchives" styleClass="btn" text="Archives" textFill="#357ab7">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="60.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/archives.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="BOTTOM_LEFT" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDons" styleClass="btn" text="Don" textFill="#357ab7">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="54.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/dons3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="15.0" left="14.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#afficherEmployes" styleClass="btn" text="Employés">
+                                 <graphic>
+                                    <ImageView fitHeight="107.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/employes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="10.0" left="14.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="notifications" prefHeight="544.0" prefWidth="284.0" spacing="30.0" visible="false">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#showNotifications" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="62.0" prefWidth="213.0" styleClass="notif" text="Notifications">
+                     <graphic>
+                        <ImageView fx:id="notifIcon" fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/notif.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="expand" fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sources/expand2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <BorderPane fx:id="bp" prefHeight="800.0" prefWidth="400.0" stylesheets="@../sources/style.css" HBox.hgrow="ALWAYS">
+         <top>
+            <Label id="title" prefHeight="85.0" text="Archives" textFill="#1b1918" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="-20.0" left="12.0" right="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <VBox spacing="25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="30.0">
+                     <children>
+                        <Button fx:id="archiverB" mnemonicParsing="false" onAction="#archiver" prefHeight="43.0" prefWidth="227.0" styleClass="rech" text="Archiver les prêts courants" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="610.0" prefWidth="1200.0">
+                     <columns>
+                        <TableColumn fx:id="annee" prefWidth="${table.width*0.18}" text="Année" />
+                        <TableColumn fx:id="Psociaux" prefWidth="${table.width*0.15}" text="Prêts sociaux" />
+                        <TableColumn fx:id="Pelectro" prefWidth="${table.width*0.21}" text="Prêts Electroménagers" />
+                        <TableColumn fx:id="dons" prefWidth="${table.width*0.12}" text="Dons" />
+                        <TableColumn fx:id="total" prefWidth="${table.width*0.14}" text="Total" />
+                        <TableColumn fx:id="budget" prefWidth="${table.width*0.2}" text="Budget annuel" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="40.0" left="50.0" right="70.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</HBox>

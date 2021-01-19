@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="wholee" stylesheets="@../sources/styleAccueil.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.AccueilController">
+   <center>
+      <BorderPane id="body" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../sources/styleAccueil.css">
+         <top>
+            <BorderPane prefHeight="71.0" prefWidth="817.0" BorderPane.alignment="CENTER">
+               <left>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#accueil" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../sources/Logo.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </left>
+               <center>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="56.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="connexion" mnemonicParsing="false" onAction="#cnx" styleClass="btn1" text="Connexion" />
+                        <Button mnemonicParsing="false" onAction="#aide" styleClass="btn1" text="Aide" />
+                        <Button mnemonicParsing="false" onAction="#propos" styleClass="btn1" text="À propos">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets right="5.0" top="15.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox maxWidth="-Infinity" prefHeight="623.0" prefWidth="1028.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="title" text="COSEsi :" />
+                  <Text fx:id="desc" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="desc" text="« COSEsi » (Commission des Œuvre Sociales de l’Esi) est une application desktop pour le suivi des prêts de différent type (social, électroménager et don) des employés de l’ESI et gérer les fonds des œuvres sociales, destiné au personnel du COS. C’est un outil d’administration qui assure une meilleure confidentialité et limite les erreurs de saisie." wrappingWidth="1141.8828125">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Label styleClass="title" text="Développée par :" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="1092.0">
+                     <children>
+                        <ImageView fitHeight="52.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64%20(3).png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="desc" text="Boulaouad Adel" />
+                        <ImageView fitHeight="52.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64%20(4).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="Oussaidene Smail" />
+                        <ImageView fitHeight="70.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64%20(5).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="Bouaziz Sofiane" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="1092.0">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="desc" text="Hassani Mourad" />
+                        <ImageView fitHeight="53.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="Mabrouki Malik" />
+                        <ImageView fitHeight="67.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-person-64%20(2).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="Benhalima Youcef" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label styleClass="title" text="Encadré par :" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-star-64.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="SiTayeb Fatima" />
+                        <ImageView fitHeight="49.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-star-64.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="desc" text="Khelouat boualem" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="30.0" top="50.0" />
+               </padding>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

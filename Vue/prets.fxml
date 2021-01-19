@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox id="body" fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" stylesheets="@../sources/stylePrets.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.PretsController">
+    <children>
+        <VBox id="leftSide" prefHeight="800.0" prefWidth="309.0">
+            <children>
+                <ImageView fitHeight="83.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../sources/Logo.png" />
+                    </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" />
+               </VBox.margin>
+                </ImageView>
+                <ScrollPane hbarPolicy="NEVER" prefHeight="586.0" prefWidth="309.0" styleClass="scroll">
+                    <content>
+                        <StackPane prefHeight="584.0" prefWidth="307.0">
+                            <children>
+                                <VBox fx:id="menu" prefHeight="555.0" prefWidth="324.0">
+                                    <children>
+                                        <Button id="home" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#afficherHome" styleClass="btn" text="Accueil">
+                                            <graphic>
+                                                <ImageView fitHeight="80.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/home-run%20(2).png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDemandes" prefHeight="81.0" prefWidth="307.0" styleClass="btn" text="Demandes des prêts" textAlignment="CENTER" textFill="#357ab7">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="64.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/demandes3.png" />
+                                                    </image>
+                                                    <viewport>
+                                                        <Rectangle2D />
+                                                    </viewport>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="15.0" left="14.0" top="15.0" />
+                                            </padding>
+                                        </Button>
+                                        <Button id="prets" alignment="BOTTOM_LEFT" graphicTextGap="15.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherPrets" styleClass="btn" text="Suivi des prêts" textAlignment="CENTER" textFill="#357ab7">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/prets4.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="15.0" left="14.0" top="15.0" />
+                                            </padding>
+                                        </Button>
+                                        <Button alignment="BOTTOM_LEFT" graphicTextGap="7.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherStats" styleClass="btn" text="Statistiques" textFill="#357ab7">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="65.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/stats3.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="15.0" left="14.0" top="15.0" />
+                                            </padding>
+                                        </Button>
+                                        <Button alignment="BOTTOM_LEFT" graphicTextGap="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherArchives" styleClass="btn" text="Archives" textFill="#357ab7">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/archives3.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="15.0" left="14.0" top="15.0" />
+                                            </padding>
+                                        </Button>
+                                        <Button alignment="BOTTOM_LEFT" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDons" styleClass="btn" text="Don" textFill="#357ab7">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="54.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/dons3.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="15.0" left="14.0" top="15.0" />
+                                            </padding>
+                                        </Button>
+                                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#afficherEmployes" styleClass="btn" text="Employés">
+                                            <graphic>
+                                                <ImageView fitHeight="107.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../sources/employes.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="10.0" left="14.0" top="10.0" />
+                                            </padding>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="notifications" prefHeight="544.0" prefWidth="284.0" spacing="30.0" visible="false">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </StackPane>
+                    </content>
+                </ScrollPane>
+                <HBox alignment="CENTER_LEFT" onMouseClicked="#showNotifications" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <Label prefHeight="62.0" prefWidth="213.0" styleClass="notif" text="Notifications">
+                            <graphic>
+                                <ImageView fx:id="notifIcon" fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/notif.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                        <ImageView fx:id="expand" fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../sources/expand2.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <BorderPane prefHeight="800.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+         <top>
+            <Label id="title" prefHeight="85.0" text="Liste des prêts" textFill="#1b1918" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="-20.0" left="12.0" right="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <VBox spacing="25.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="30.0">
+                     <children>
+                        <MenuButton mnemonicParsing="false" prefHeight="45.0" prefWidth="138.0" styleClass="rech" text="Recherche" textFill="WHITE">
+                           <items>
+                              <CustomMenuItem hideOnClick="false" mnemonicParsing="false" styleClass="criteres" text="Type">
+                                 <content>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="500.0" spacing="15.0">
+                                       <children>
+                                          <RadioButton fx:id="rSocial" mnemonicParsing="false" text="Social" textFill="WHITE">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="typeGroupe" />
+                                             </toggleGroup>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rElec" mnemonicParsing="false" text="Electroménager" textFill="WHITE" toggleGroup="$typeGroupe">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem hideOnClick="false" mnemonicParsing="false" styleClass="criteres" text="Date">
+                                 <content>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="510.0" spacing="15.0">
+                                       <children>
+                                          <Label text="Date début" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="rDebut">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                          <Label text="Date fin" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="rFin" />
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem mnemonicParsing="false" styleClass="criteres" text="Somme pretée">
+                                 <content>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="500.0" spacing="15.0">
+                                       <children>
+                                          <Label text="Somme min" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="rMin" promptText="(DA)">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label text="Somme max" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="rMax" promptText="(DA)" />
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem hideOnClick="false" mnemonicParsing="false" styleClass="criteres" text="Remboursé">
+                                <content>
+                                    <HBox alignment="CENTER" spacing="20.0">
+                                       <children>
+                                        <CheckBox fx:id="rRembourse" prefHeight="30.0" text="Remboursé" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="rCloture" mnemonicParsing="false" text="Clôturé" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></CheckBox>
+                                       </children>
+                                    </HBox>
+                                </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem hideOnClick="false" mnemonicParsing="false" styleClass="criteres" text="Employé">
+                                 <content>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="500.0" spacing="15.0">
+                                       <children>
+                                          <Label text="Nom de l'employé" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="rEmploye" promptText="Nom" />
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem hideOnClick="false" mnemonicParsing="false" styleClass="criteres" text="Pv">
+                                 <content>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="500.0" spacing="15.0">
+                                       <children>
+                                          <Label text="Numero du PV" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="rPv" promptText="PV" />
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                              <CustomMenuItem id="last" mnemonicParsing="false" styleClass="criteres" text="Recherche">
+                                 <content>
+                                    <HBox alignment="CENTER_RIGHT" prefWidth="470.0">
+                                       <children>
+                                          <Button fx:id="rechercher" mnemonicParsing="false" onAction="#rechercher" styleClass="go" text="Lancer la recherche" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </CustomMenuItem>
+                           </items>
+                           <font>
+                              <Font name="Ebrima Bold" size="16.0" />
+                           </font>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" onAction="#pretsEnCours" prefHeight="43.0" prefWidth="193.0" styleClass="rech" text="Prêts en cours ce mois" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="16.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#goBack" prefHeight="43.0" styleClass="back" text="Revenir à la liste principale" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="448.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="importer" mnemonicParsing="false" onAction="#importer" styleClass="exporter" text="Importer une liste de prêt" />
+                              <Button fx:id="exporter" mnemonicParsing="false" onAction="#exporter" styleClass="exporter" text="Exporter la liste en Excel" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="610.0" prefWidth="1200.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="130.0" text="Identifiant" />
+                        <TableColumn fx:id="icon" prefWidth="50.0" />
+                        <TableColumn fx:id="type" prefWidth="150.0" text="Type" />
+                        <TableColumn fx:id="date" prefWidth="150.0" text="Date" />
+                        <TableColumn fx:id="somme" prefWidth="176.0" text="Somme prêtée (DA)" />
+                        <TableColumn fx:id="sommeRestante" prefWidth="158.0" text="Somme restante&#10;à rembourser (DA)&#10;" />
+                        <TableColumn fx:id="employe" prefWidth="222.0" text="Employé">
+                           <columns>
+                              <TableColumn fx:id="nom" prefWidth="130.0" text="Nom" />
+                              <TableColumn fx:id="prenom" prefWidth="130.0" text="Prenom" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </center></BorderPane>
+    </children>
+</HBox>

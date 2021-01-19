@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="body" prefHeight="235.0" prefWidth="410.0" stylesheets="@../sources/styleReport.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.ClotureController">
+    <children>
+        <Label layoutX="5.0" layoutY="2.0" prefHeight="39.0" prefWidth="451.0" style="-fx-background-color: #286571;" text="                         Détails sur la Clôture" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0" />
+            </font>
+        </Label>
+        <Label graphicTextGap="8.0" layoutX="90.0" layoutY="67.0" styleClass="labels" text="Date de Clôture :" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="77.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../sources/calendar.png" />
+                    </image>
+                </ImageView>
+            </graphic></Label>
+        <Label graphicTextGap="8.0" layoutX="90.0" layoutY="121.0" styleClass="labels" text="Cause :" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../sources/test%20(1).png" />
+                    </image>
+                </ImageView>
+            </graphic></Label>
+        <Label fx:id="date" layoutX="285.0" layoutY="76.0" styleClass="info" text="Label" textFill="#d0d0d0" />
+        <Label fx:id="cause" layoutX="285.0" layoutY="138.0" styleClass="info" text="Label" textFill="#d0d0d0" />
+        <Button layoutX="58.0" layoutY="184.0" mnemonicParsing="false" onAction="#envoyer" styleClass="btn" text="Notifier l'employé par mail" />
+    </children>
+</AnchorPane>

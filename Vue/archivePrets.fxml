@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane stylesheets="@../sources/stylePrets.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.ArchivePretsController">
+   <center>
+      <TableView fx:id="table" prefHeight="550.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="130.0" text="Identifiant" />
+            <TableColumn fx:id="type" prefWidth="150.0" text="Type" />
+            <TableColumn fx:id="date" prefWidth="150.0" text="Date" />
+            <TableColumn fx:id="somme" prefWidth="176.0" text="Somme prêtée (DA)" />
+            <TableColumn fx:id="employe" prefWidth="240.0" text="Employé">
+               <columns>
+                  <TableColumn fx:id="nom" prefWidth="130.0" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="130.0" text="Prenom" />
+               </columns>
+            </TableColumn>
+         </columns>
+      </TableView>
+   </center>
+</BorderPane>

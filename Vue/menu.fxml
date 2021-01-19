@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox id="whole" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" stylesheets="@../sources/styleMenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.MenuController">
+	<children>
+		<VBox id="leftSide" prefHeight="800.0" prefWidth="309.0">
+			<children>
+				<ImageView fitHeight="83.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../sources/Logo.png" />
+					</image>
+					<VBox.margin>
+						<Insets bottom="20.0" left="30.0" />
+					</VBox.margin>
+				</ImageView>
+				<ScrollPane hbarPolicy="NEVER" prefHeight="586.0" prefWidth="309.0" styleClass="scroll">
+					<content>
+						<StackPane prefHeight="559.0" prefWidth="307.0">
+							<children>
+								<VBox fx:id="menu" prefWidth="307.0">
+									<children>
+										<Button id="home" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" styleClass="btn" text="Accueil">
+											<graphic>
+												<ImageView fitHeight="80.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/home-run%20(1).png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#demandes" prefHeight="81.0" prefWidth="307.0" styleClass="btn" text="Demandes des prêts" textAlignment="CENTER" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="64.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/demandes3.png" />
+													</image>
+													<viewport>
+														<Rectangle2D />
+													</viewport>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button id="prets" alignment="BOTTOM_LEFT" graphicTextGap="15.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherPrets" styleClass="btn" text="Suivi des prêts" textAlignment="CENTER" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/prets3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="7.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherStats" styleClass="btn" text="Statistiques" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="65.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/stats3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherArchives" styleClass="btn" text="Archives" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="60.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/archives3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDons" styleClass="btn" text="Don" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="54.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/dons3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#afficherEmployes" styleClass="btn" text="Employés">
+											<graphic>
+												<ImageView fitHeight="107.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/employes.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="10.0" left="14.0" top="10.0" />
+											</padding>
+										</Button>
+									</children>
+								</VBox>
+								<VBox fx:id="notifications" prefHeight="554.0" prefWidth="307.0" spacing="30.0" visible="false">
+									<padding>
+										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+									</padding>
+								</VBox>
+							</children>
+						</StackPane>
+					</content>
+				</ScrollPane>
+				<HBox alignment="CENTER_LEFT" onMouseClicked="#showNotifications" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label prefHeight="62.0" prefWidth="213.0" styleClass="notif" text="Notifications">
+							<graphic>
+								<ImageView fx:id="notifIcon" fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../sources/notif.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</Label>
+						<ImageView fx:id="expand" fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../sources/expand2.png" />
+							</image>
+						</ImageView>
+					</children>
+				</HBox>
+				<VBox alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+					<children>
+						<HBox alignment="CENTER_LEFT">
+							<children>
+								<Button mnemonicParsing="false" onAction="#déconnexion" prefHeight="59.0" prefWidth="200.0" styleClass="deco" text=" Déconnexion" textFill="WHITE">
+									<font>
+										<Font name="Ebrima" size="20.0" />
+									</font>
+									<graphic>
+										<ImageView id="logoutIcon" fitHeight="31.0" fitWidth="26.0">
+											<image>
+												<Image url="@../sources/logout.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</Button>
+								<ImageView fitHeight="73.0" fitWidth="77.0" onMouseClicked="#settings" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../sources/settings.png" />
+									</image>
+									<HBox.margin>
+										<Insets bottom="-5.0" />
+									</HBox.margin>
+								</ImageView>
+							</children>
+						</HBox>
+					</children>
+					<VBox.margin>
+						<Insets bottom="15.0" left="20.0" />
+					</VBox.margin>
+				</VBox>
+			</children>
+		</VBox>
+		<StackPane fx:id="stack" HBox.hgrow="ALWAYS">
+			<children>
+				<BorderPane id="body" onMouseClicked="#visible" prefHeight="800.0" prefWidth="400.0" stylesheets="@../sources/style.css">
+					<top>
+						<BorderPane BorderPane.alignment="TOP_RIGHT">
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="5.0" right="20.0" top="20.0" />
+							</BorderPane.margin>
+							<right>
+								<Label fx:id="budgetActuel" alignment="CENTER" graphicTextGap="10.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#setBudget" prefHeight="43.0" prefWidth="262.0" styleClass="money" text="2850000 DA" BorderPane.alignment="CENTER">
+									<font>
+										<Font name="Ebrima Bold" size="25.0" />
+									</font>
+									<graphic>
+										<ImageView fitHeight="58.0" fitWidth="54.0" onMouseClicked="#setBudget" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../sources/coinsPlus.png" />
+											</image>
+										</ImageView>
+									</graphic>
+									<padding>
+										<Insets left="5.0" right="2.0" />
+									</padding>
+								</Label>
+							</right>
+							<left>
+								<Button fx:id="turn" mnemonicParsing="false" onAction="#turn" styleClass="prets" text="Liste des employés à prélever ce mois" BorderPane.alignment="CENTER" />
+							</left>
+						</BorderPane>
+					</top>
+					<center>
+						<StackPane BorderPane.alignment="TOP_CENTER">
+							<BorderPane.margin>
+								<Insets top="20.0" />
+							</BorderPane.margin>
+							<children>
+								<VBox fx:id="content" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308">
+									<children>
+										<HBox alignment="CENTER" prefHeight="208.0" prefWidth="1111.0" spacing="20.0">
+											<children>
+												<VBox alignment="TOP_CENTER">
+													<children>
+														<Label styleClass="greenT" text="Prêts" />
+														<StackPane onMouseClicked="#argentPrete">
+															<children>
+																<ImageView fx:id="green" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#enterGreen" onMouseExited="#exitGreen" pickOnBounds="true" preserveRatio="true">
+																	<image>
+																		<Image url="@../sources/green.png" />
+																	</image>
+																</ImageView>
+																<Label fx:id="sommePrete" onMouseEntered="#enterGreen" onMouseExited="#exitGreen" styleClass="green" text="237000 (DA)" />
+															</children>
+														</StackPane>
+													</children>
+													<HBox.margin>
+														<Insets top="150.0" />
+													</HBox.margin>
+												</VBox>
+												<VBox alignment="TOP_CENTER">
+													<children>
+														<Label prefHeight="59.0" prefWidth="204.0" styleClass="blueT" text="Budget restant&#10;de l'année passée" textAlignment="CENTER" />
+														<StackPane>
+															<children>
+																<ImageView fx:id="blue" fitHeight="150.0" fitWidth="162.0" onMouseEntered="#enterBlue" onMouseExited="#exitBlue" pickOnBounds="true" preserveRatio="true">
+																	<image>
+																		<Image url="@../sources/blue.png" />
+																	</image>
+																</ImageView>
+																<Label fx:id="budgetRestant" onMouseEntered="#enterBlue" onMouseExited="#exitBlue" styleClass="blue" text="125000 (DA)" />
+															</children>
+														</StackPane>
+													</children>
+												</VBox>
+												<VBox alignment="TOP_CENTER" spacing="15.0">
+													<children>
+														<Label styleClass="purpleT" text="Donation initiale">
+															<VBox.margin>
+																<Insets top="15.0" />
+															</VBox.margin>
+														</Label>
+														<StackPane>
+															<children>
+																<Label fx:id="donationInit" onMouseEntered="#enterPurple" onMouseExited="#exitPurple" styleClass="purple" text="200000 (DA)" />
+																<ImageView fx:id="purple" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#enterPurple" onMouseExited="#exitPurple" pickOnBounds="true" preserveRatio="true">
+																	<image>
+																		<Image url="@../sources/purple.png" />
+																	</image>
+																</ImageView>
+															</children>
+														</StackPane>
+													</children>
+												</VBox>
+												<VBox alignment="TOP_CENTER">
+													<children>
+														<Label styleClass="redT" text="Remboursement" />
+														<StackPane onMouseClicked="#argentRembourse">
+															<children>
+																<ImageView fx:id="red" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#argentRembourse" onMouseEntered="#enterRed" onMouseExited="#exitRed" pickOnBounds="true" preserveRatio="true">
+																	<image>
+																		<Image url="@../sources/red.png" />
+																	</image>
+																</ImageView>
+																<Label fx:id="sommeRembr" onMouseEntered="#enterRed" onMouseExited="#exitRed" styleClass="red" text="186000 (DA)" />
+															</children>
+														</StackPane>
+													</children>
+													<HBox.margin>
+														<Insets top="150.0" />
+													</HBox.margin>
+												</VBox>
+											</children>
+											<VBox.margin>
+												<Insets />
+											</VBox.margin>
+										</HBox>
+										<Label styleClass="title" text="Suivi du compte COS" />
+										<StackPane>
+											<VBox.margin>
+												<Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+											</VBox.margin>
+											<children>
+												<AreaChart fx:id="chart" horizontalZeroLineVisible="false" prefHeight="320.0" prefWidth="1171.0" verticalZeroLineVisible="false">
+													<xAxis>
+														<CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+													</xAxis>
+													<yAxis>
+														<NumberAxis side="LEFT" tickLabelFill="WHITE" />
+													</yAxis>
+												</AreaChart>
+												<TableView fx:id="table2" prefHeight="360.0" prefWidth="1111.0" visible="false" VBox.vgrow="ALWAYS">
+													<columns>
+														<TableColumn fx:id="date2" prefWidth="230.0" text="Date" />
+														<TableColumn fx:id="type2" minWidth="0.0" prefWidth="285.6666259765625" text="Type" />
+														<TableColumn fx:id="montant" prefWidth="276.3333740234375" text="Montant" />
+														<TableColumn fx:id="budget" prefWidth="316.666748046875" text="Budget" />
+													</columns>
+												</TableView>
+											</children>
+										</StackPane>
+									</children>
+									<StackPane.margin>
+										<Insets bottom="20.0" />
+									</StackPane.margin>
+								</VBox>
+								<BorderPane fx:id="tablePane" prefHeight="200.0" prefWidth="200.0" visible="false">
+									<center>
+										<TableView fx:id="table" prefHeight="610.0" prefWidth="1200.0">
+											<columns>
+												<TableColumn fx:id="id" prefWidth="130.0" text="Identifiant" />
+												<TableColumn fx:id="nom" prefWidth="130.0" text="Nom" />
+												<TableColumn fx:id="prenom" prefWidth="130.0" text="Prenom" />
+												<TableColumn fx:id="service" prefWidth="158.0" text="Service&#10;" />
+												<TableColumn fx:id="date" prefWidth="150.0" text="Date" />
+											</columns>
+										</TableView>
+									</center>
+									<padding>
+										<Insets bottom="40.0" left="40.0" right="40.0" top="20.0" />
+									</padding>
+									<top>
+										<HBox prefHeight="48.0" prefWidth="1111.0" spacing="30.0" BorderPane.alignment="CENTER">
+											<children>
+												<Button mnemonicParsing="false" onAction="#telecharger" styleClass="listButton" text="Télécharger la liste" />
+												<Button fx:id="send" mnemonicParsing="false" onAction="#sendMail" styleClass="listButton" text="Envoyer la liste au service de comptabilité" />
+											</children>
+										</HBox>
+									</top>
+								</BorderPane>
+							</children>
+						</StackPane>
+					</center>
+				</BorderPane>
+				<BorderPane fx:id="argentPrete" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" styleClass="moreGreen" visible="false">
+					<StackPane.margin>
+						<Insets top="120.0" />
+					</StackPane.margin>
+					<center>
+						<BarChart fx:id="preteChart" alternativeRowFillVisible="false" barGap="20.0" categoryGap="20.0" horizontalGridLinesVisible="false" legendVisible="false" title="Prêts par type de prêt" verticalGridLinesVisible="false" BorderPane.alignment="CENTER">
+							<xAxis>
+								<CategoryAxis side="BOTTOM" startMargin="15.0" />
+							</xAxis>
+							<yAxis>
+								<NumberAxis side="LEFT" />
+							</yAxis>
+						</BarChart>
+					</center>
+				</BorderPane>
+				<BorderPane fx:id="argentRembr" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" styleClass="moreRed" visible="false">
+					<center>
+						<BarChart fx:id="rembrChart" alternativeRowFillVisible="false" barGap="40.0" categoryGap="20.0" horizontalGridLinesVisible="false" legendVisible="false" stylesheets="@../sources/bars.css" title="Remboursements par type de prêt" verticalGridLinesVisible="false" BorderPane.alignment="CENTER">
+							<xAxis>
+								<CategoryAxis side="BOTTOM" startMargin="15.0" />
+							</xAxis>
+							<yAxis>
+								<NumberAxis side="LEFT" />
+							</yAxis>
+						</BarChart>
+					</center>
+					<StackPane.margin>
+						<Insets top="120.0" />
+					</StackPane.margin>
+				</BorderPane>
+			</children>
+		</StackPane>
+	</children>
+</HBox>

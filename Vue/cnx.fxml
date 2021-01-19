@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" stylesheets="@../sources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.AccueilController">
+   <left>
+      <AnchorPane styleClass="bp" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="201.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="359.0" onMouseClicked="#accueil" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sources/Logo%20white.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="100.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Gestion - Efficacité - Innovation" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="140.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="27.0" layoutY="354.0" text="L'application spécialisée dans la gestion des prêts et " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="400.0" text="des dons du comité des oeuvres sociales" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane maxHeight="700.0" maxWidth="449.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFDFAE; -fx-background-radius: 20;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <children>
+                  <GridPane layoutX="12.0" layoutY="8.0" prefHeight="547.0" prefWidth="380.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="178.0" minHeight="6.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="357.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="229.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="121.0" text="Log in" textFill="#0e1f3d" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../sources/Icon%20awesome-user-circle.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <TextField fx:id="username" promptText="Username" styleClass="text-field" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="password" promptText="Password" styleClass="text-field" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </PasswordField>
+                        <Button mnemonicParsing="false" onAction="#connexion" prefHeight="25.0" prefWidth="735.0" style="-fx-background-color: #0E1F3D; -fx-background-radius: 10;" text="Confirmer" textFill="WHITE" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

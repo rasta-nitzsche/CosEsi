@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="body" prefHeight="226.0" prefWidth="435.0" stylesheets="@../sources/styleBudget.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.BudgetController">
+   <children>
+      <Label alignment="CENTER" layoutX="58.0" layoutY="14.0" prefHeight="40.0" prefWidth="320.0" styleClass="title" text="Introduire le nouveau budget" textAlignment="CENTER" />
+      <Label layoutX="36.0" layoutY="72.0" styleClass="labels" text="Budget actuel :" />
+      <Label layoutX="36.0" layoutY="119.0" styleClass="labels" text="Nouveau budget :" />
+      <Label fx:id="oldBudget" layoutX="213.0" layoutY="72.0" styleClass="actuel" text="Label" />
+      <Button fx:id="confirmer" layoutX="294.0" layoutY="177.0" mnemonicParsing="false" onAction="#confirmer" styleClass="confirmer" text="Confirmer" />
+      <TextField fx:id="newBudget" layoutX="206.0" layoutY="111.0" prefHeight="21.0" prefWidth="153.0" styleClass="new" />
+      <Label layoutX="371.0" layoutY="122.0" styleClass="actuel" text="(DA)" />
+   </children>
+</AnchorPane>

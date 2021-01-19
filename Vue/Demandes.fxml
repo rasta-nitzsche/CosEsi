@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1500.0"
+	stylesheets="@../sources/styleDemandes.css"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="sample.Control.AfficheDemandeController">
+	<children>
+		<VBox id="leftSide" prefHeight="800.0" prefWidth="309.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<children>
+				<ImageView fitHeight="83.0" fitWidth="227.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../sources/Logo.png" />
+					</image>
+					<VBox.margin>
+						<Insets bottom="20.0" left="30.0" />
+					</VBox.margin>
+				</ImageView>
+				<ScrollPane hbarPolicy="NEVER" prefHeight="586.0"
+					prefWidth="309.0" styleClass="scroll">
+					<content>
+						<StackPane prefHeight="584.0" prefWidth="307.0">
+							<children>
+								<VBox fx:id="menu" prefHeight="555.0" prefWidth="324.0">
+									<children>
+										<Button id="home" alignment="BOTTOM_LEFT"
+											graphicTextGap="10.0" mnemonicParsing="false"
+											onAction="#afficherHome" styleClass="btn" text="Accueil">
+											<graphic>
+												<ImageView fitHeight="80.0" fitWidth="54.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/home-run%20(2).png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</Button>
+										<Button id="courant" alignment="BOTTOM_LEFT"
+											graphicTextGap="10.0" mnemonicParsing="false"
+											nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherDemandes"
+											prefHeight="81.0" prefWidth="307.0" styleClass="btn"
+											text="Demandes des prêts" textAlignment="CENTER"
+											textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="64.0" fitWidth="53.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/demandes.png" />
+													</image>
+													<viewport>
+														<Rectangle2D />
+													</viewport>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button id="prets" alignment="BOTTOM_LEFT"
+											graphicTextGap="15.0" mnemonicParsing="false"
+											nodeOrientation="LEFT_TO_RIGHT" onAction="#afficherPrets"
+											styleClass="btn" text="Suivi des prêts"
+											textAlignment="CENTER" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="52.0" fitWidth="50.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/prets3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="7.0"
+											mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT"
+											onAction="#afficherStats" styleClass="btn"
+											text="Statistiques" textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="65.0" fitWidth="51.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/stats3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="14.0"
+											mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT"
+											onAction="#afficherArchives" styleClass="btn" text="Archives"
+											textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="60.0" fitWidth="51.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/archives3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" graphicTextGap="20.0"
+											mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT"
+											onAction="#afficherDons" styleClass="btn" text="Don"
+											textFill="#357ab7">
+											<font>
+												<Font size="23.0" />
+											</font>
+											<graphic>
+												<ImageView fitHeight="54.0" fitWidth="49.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/dons3.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="15.0" left="14.0" top="15.0" />
+											</padding>
+										</Button>
+										<Button alignment="BOTTOM_LEFT" mnemonicParsing="false"
+											onAction="#afficherEmployes" styleClass="btn" text="Employés">
+											<graphic>
+												<ImageView fitHeight="107.0" fitWidth="59.0"
+													pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../sources/employes.png" />
+													</image>
+												</ImageView>
+											</graphic>
+											<padding>
+												<Insets bottom="10.0" left="14.0" top="10.0" />
+											</padding>
+										</Button>
+									</children>
+								</VBox>
+								<VBox fx:id="notifications" prefHeight="544.0"
+									prefWidth="284.0" spacing="30.0" visible="false">
+									<padding>
+										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+									</padding>
+								</VBox>
+							</children>
+						</StackPane>
+					</content>
+				</ScrollPane>
+				<HBox alignment="CENTER_LEFT"
+					onMouseClicked="#showNotifications" prefHeight="100.0"
+					prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label prefHeight="62.0" prefWidth="213.0"
+							styleClass="notif" text="Notifications">
+							<graphic>
+								<ImageView fx:id="notifIcon" fitHeight="55.0"
+									fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../sources/notif.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</Label>
+						<ImageView fx:id="expand" fitHeight="41.0"
+							fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../sources/expand2.png" />
+							</image>
+						</ImageView>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<BorderPane id="body" layoutX="309.0" prefHeight="800.0"
+			prefWidth="1192.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="309.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<center>
+				<VBox fx:id="vbx" prefHeight="200.0" prefWidth="100.0"
+					BorderPane.alignment="CENTER">
+					<children>
+						<HBox alignment="CENTER_LEFT" prefHeight="100.0"
+							prefWidth="200.0" spacing="25.0">
+							<children>
+								<Button fx:id="importerB" id="haut"
+									mnemonicParsing="false" onAction="#importer" prefHeight="44.0"
+									prefWidth="150.0" text="Ajout d'excel" textFill="WHITE">
+									<font>
+										<Font name="Ebrima Bold" size="16.0" />
+									</font>
+									<HBox.margin>
+										<Insets left="40.0" />
+									</HBox.margin>
+								</Button>
+								<Button id="haut" fx:id="ajouterB"
+									mnemonicParsing="false" onAction="#ajoutdemande"
+									prefHeight="44.0" prefWidth="150.0" text="Ajout manuel"
+									textFill="WHITE">
+									<font>
+										<Font name="Ebrima Bold" size="16.0" />
+									</font>
+								</Button>
+								<Button fx:id="exporterB" id="haut"
+									mnemonicParsing="false" onAction="#exporter" prefHeight="44.0"
+									prefWidth="193.0" text="Exporter les demandes" textFill="WHITE">
+									<font>
+										<Font name="Ebrima Bold" size="16.0" />
+									</font>
+								</Button>
+							</children>
+						</HBox>
+						<ScrollPane fx:id="sp" prefHeight="620.0"
+							prefWidth="1048.0">
+							<VBox.margin>
+								<Insets bottom="30.0" left="30.0" right="35.0" />
+							</VBox.margin>
+							<content>
+								<TableView fx:id="table" editable="true"
+									minHeight="${sp.height}" minWidth="${sp.width}"
+									prefWidth="1400">
+									<columns>
+										<TableColumn fx:id="employe" text="Employé">
+											<columns>
+												<TableColumn fx:id="nom" editable="true"
+													prefWidth="${table.width*0.1}" text="Nom" />
+												<TableColumn fx:id="prenom"
+													prefWidth="${table.width*0.1}" text="Prénom" />
+											</columns>
+										</TableColumn>
+										<TableColumn fx:id="type"
+											prefWidth="${table.width*0.15}" text="Type" />
+										<TableColumn fx:id="description"
+											prefWidth="${table.width*0.15}" text="Description" />
+										<TableColumn fx:id="date"
+											prefWidth="${table.width*0.12}" text="Date" />
+										<TableColumn fx:id="somme"
+											prefWidth="${table.width*0.1}" text="Somme prêtée" />
+										<TableColumn fx:id="fournisseur"
+											prefWidth="${table.width*0.12}" text="Fournisseur" />
+										<TableColumn fx:id="accepter"
+											prefWidth="${table.width*0.08}" text="Accepter" />
+										<TableColumn fx:id="refuser"
+											prefWidth="${table.width*0.08}" text="Réfuser" />
+
+									</columns>
+								</TableView>
+							</content>
+						</ScrollPane>
+					</children>
+				</VBox>
+			</center>
+			<top>
+				<Label id="title" text="Liste des demandes"
+					BorderPane.alignment="CENTER">
+					<font>
+						<Font name="System Bold" size="55.0" />
+					</font>
+					<BorderPane.margin>
+						<Insets top="10.0" />
+					</BorderPane.margin>
+				</Label>
+			</top>
+		</BorderPane>
+	</children>
+</AnchorPane>

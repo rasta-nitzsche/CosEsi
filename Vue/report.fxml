@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="body" prefHeight="259.0" prefWidth="410.0" stylesheets="@../sources/styleReport.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.ReportController">
+   <children>
+      <Label layoutX="5.0" layoutY="2.0" prefHeight="39.0" prefWidth="451.0" style="-fx-background-color: #286571;" text="                            Détails sur le report" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="8.0" layoutX="90.0" layoutY="67.0" styleClass="labels" text="Date du début :" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/calendar.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+      <Label graphicTextGap="8.0" layoutX="90.0" layoutY="113.0" styleClass="labels" text="Date de fin :" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="83.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/calendar.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+      <Label graphicTextGap="8.0" layoutX="90.0" layoutY="159.0" styleClass="labels" text="Cause :" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/test%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+      <Label fx:id="dDEbut" layoutX="285.0" layoutY="76.0" styleClass="info" text="Label" textFill="#d0d0d0" />
+      <Label fx:id="dFin" layoutX="285.0" layoutY="122.0" styleClass="info" text="Label" textFill="#d0d0d0" />
+      <Label fx:id="cause" layoutX="285.0" layoutY="166.0" styleClass="info" text="Label" textFill="#d0d0d0" />
+      <Button layoutX="58.0" layoutY="212.0" mnemonicParsing="false" onAction="#envoyer" styleClass="btn" text="Notifier l'employé par mail" />
+   </children>
+</AnchorPane>

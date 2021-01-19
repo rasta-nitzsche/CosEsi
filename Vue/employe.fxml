@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="body" maxHeight="1.7976931348623157E308" minHeight="580.0" minWidth="0.0" prefHeight="770.0" prefWidth="1061.0" stylesheets="@../sources/styleEmploye.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.EmployeController">
+    <top>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label id="top" prefHeight="36.0" prefWidth="386.0" style="-fx-border-width: 0 0 2 0;" text="Information supplementaire sur l'employé" textFill="WHITE">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding></Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="5.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="TOP_RIGHT">
+            <children>
+            <Button mnemonicParsing="false" fx:id="afficherPrets" onAction="#afficherPrets" prefHeight="59.0" styleClass="bottom" text="Afficher ses prêts" />
+            <Button fx:id="prelever" mnemonicParsing="false" onAction="#prelever" prefHeight="59.0" styleClass="bottom" text="Prélever tous ses prêts" />
+            <Button fx:id="reporter" mnemonicParsing="false" onAction="#reporter" styleClass="bottom" text="Reporter tous ses prêts">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Button>
+            <Button fx:id="cloturer" mnemonicParsing="false" onAction="#cloturer" styleClass="bottom" text="Clôturer tous ses prêts">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Button>
+                <Button id="retour" mnemonicParsing="false" onAction="#retour" prefHeight="46.0" prefWidth="105.0" text="Retour">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets right="40.0" />
+            </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="20.0" right="20.0" />
+            </BorderPane.margin>
+            <children>
+                <Label id="general" prefHeight="37.0" prefWidth="192.0" text="Information générale">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <GridPane prefHeight="287.0" prefWidth="1021.0" styleClass="firstGrid">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="190.3333282470703" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="203.6666717529297" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="271.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label styleClass="labels2" text="Identifiant :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/key.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label styleClass="labels2" text="Nom :" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/myid.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label styleClass="labels2" text="Date de naissance :" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/k.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="id" styleClass="info" text="Label" textFill="#cccccc" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="nom" styleClass="info" text="Label" textFill="#cccccc" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="date" styleClass="info" text="Label" textFill="#cccccc" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="service" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                  <Label styleClass="labels2" text="Prénom :" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/myid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="labels2" text="Service :" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/work.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label styleClass="labels2" text="NSS :" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/nss.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label styleClass="labels2" text="Numéro CCP :" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/ccp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="nss" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ccp" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prenom" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="labels2" text="Date de recrutement :" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/k.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="dateRecru" styleClass="info" textFill="#cccccc" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="labels2" text="Email :" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-email-open-40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="labels2" text="Situation familiale :" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-family-40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="email" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="situation" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="labels2" text="Code :" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-hashtag-40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="code" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="labels2" text="Grade :" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="111.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/icons8-rating-40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="grade" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </GridPane>
+                <Label id="avance" prefHeight="37.0" prefWidth="190.0" text="Information avancée">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <GridPane alignment="CENTER" maxWidth="3000.0" prefHeight="143.0" prefWidth="797.0" styleClass="secondGrid">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.3333435058594" minWidth="250.0" prefWidth="89.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.3333129882812" minWidth="10.0" prefWidth="300.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="52.33331298828125" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label styleClass="labels" text="Nombre de demades&#10;en attentes de décision">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView cache="true" fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/history.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="motifL" styleClass="labels" text="Nombre de prêts accéptés" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView cache="true" cacheHint="ROTATE" fitHeight="45.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sources/history.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="nbDemandes" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="nbPrets" styleClass="info" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
